@@ -9,7 +9,7 @@ console.log('SITE_BASE', SITE_BASE);
 export default defineConfig({
 	site: SITE_URL,
 	base: SITE_BASE,
-	trailingSlash: 'always',
+	trailingSlash: 'never',
 	// prefetch: true,
 	integrations: [
 		starlight({
