@@ -1,6 +1,7 @@
 # Selenite Docs
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
 
+Documentation of the Selenite project, a web-based graphical interface for the [GEOS Simulation Framework](https://github.com/GEOS-DEV/GEOS).
 
 ## Configuration
 The build of the documentation can be configured using environment variables. The following variables are available:
