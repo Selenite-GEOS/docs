@@ -1,0 +1,42 @@
+---
+title: Welcome to Selenite
+description: Get started building your docs site with Starlight.
+template: splash
+hero:
+  tagline: <h2>
+                Tools for GEOS and geoscience
+            </h2>
+            <p class="">
+                GEOS is a complex software, Selenite aims to simplify its
+                use.
+            </p>
+#   image:
+#     file: ../../assets/houston.webp
+  actions:
+    - text: Getting Started
+      link: /guides/getting-started
+      icon: right-arrow
+      variant: primary
+    - text: Read the GEOS docs
+      link: https://geosx-geosx.readthedocs-hosted.com/en/latest/
+      icon: external
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Next steps
+
+<CardGrid stagger>
+	<Card title="Update content" icon="pencil">
+		Edit `src/content/docs/index.mdx` to see this page change.
+	</Card>
+	<Card title="Add new content" icon="add-document">
+		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	</Card>
+	<Card title="Configure your site" icon="setting">
+		Edit your `sidebar` and other config in `astro.config.mjs`.
+	</Card>
+	<Card title="Read the docs" icon="open-book">
+		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	</Card>
+</CardGrid>
