@@ -14,7 +14,6 @@ export default defineConfig({
 	site: SITE_URL,
 	base: SITE_BASE,
 	trailingSlash: 'never',
-	// prefetch: true,
 	integrations: [
 		starlight({
 			title: 'Selenite Docs',
@@ -67,6 +66,9 @@ export default defineConfig({
 				fr: {
 					label: 'Français',
 				}
+			},
+			components: {
+				Head: "./src/components/starlight/Head.astro",
 			}
 		}),
 	],

@@ -9,8 +9,8 @@ on:
     types: [created]
 
 env:
-  SITE_URL: https://shaitanlyss.github.io
-  SITE_BASE: '/selenite-docs'
+  SITE_URL: https://selenite-geos.github.io
+  SITE_BASE: '/docs'
 jobs:
   build:
     runs-on: ubuntu-latest
