@@ -9,8 +9,9 @@ on:
     types: [created]
 
 env:
-  SITE_URL: https://selenite-geos.github.io
-  SITE_BASE: '/docs'
+  SITE_ORIGIN: https://selenite-geos.github.io
+  BASE_PATH: '/docs'
+
 jobs:
   build:
     runs-on: ubuntu-latest

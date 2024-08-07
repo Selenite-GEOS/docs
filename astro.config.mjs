@@ -2,17 +2,18 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import { loadEnv } from 'vite';
 
-const { SITE_URL = 'http://localhost:4444', SITE_BASE = '' } = loadEnv(process.env.NODE_ENV, process.cwd(), "");
-console.log('SITE_URL', SITE_URL);
-if (SITE_BASE !== '')
-	console.log('SITE_BASE', SITE_BASE);
-else 
-	console.log('No site base.')
+const { SITE_ORIGIN, BASE_PATH = "/" } = loadEnv(process.env.NODE_ENV, process.cwd(), "");
+if (SITE_ORIGIN)
+console.log('SITE_ORIGIN', SITE_ORIGIN);
+else
+console.warn('SITE_ORIGIN is not specified. A sitemap will not be generated.');
+console.log('BASE_PATH', BASE_PATH);
+
 
 // https://astro.build/config
 export default defineConfig({
-	site: SITE_URL,
-	base: SITE_BASE,
+	site: SITE_ORIGIN,
+	base: BASE_PATH,
 	trailingSlash: 'never',
 	integrations: [
 		starlight({
@@ -44,10 +45,10 @@ export default defineConfig({
 				},
 				{
 					label: 'Developper',
-					autogenerate: { directory: 'developper' },	
+					autogenerate: { directory: 'developper' },
 					translations: {
 						fr: 'Développeur',
-					},				
+					},
 				},
 				{
 					label: 'Reference',
