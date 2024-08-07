@@ -73,6 +73,11 @@ export default defineConfig({
 			}
 		}),
 	],
+	vite: {
+		css: {
+			transformer: 'lightningcss'
+		}
+	},
 	server: {
 		port: 4444,
 		host: true

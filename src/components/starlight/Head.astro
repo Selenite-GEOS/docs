@@ -1,23 +1,51 @@
 ---
-import type { Props } from '@astrojs/starlight/props';
-import StarlightHead from '@astrojs/starlight/components/Head.astro';
-import VtbotStarlight from 'astro-vtbot/components/starlight/Base.astro';
-import LoadingIndicator from 'astro-vtbot/components/LoadingIndicator.astro';
-import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+import type { Props } from "@astrojs/starlight/props";
+import StarlightHead from "@astrojs/starlight/components/Head.astro";
+import VtbotStarlight from "astro-vtbot/components/starlight/Base.astro";
+import LoadingIndicator from "astro-vtbot/components/LoadingIndicator.astro";
+import ProgressBar from "astro-vtbot/components/ProgressBar.astro";
 ---
 
 <VtbotStarlight {...Astro.props}>
-  <StarlightHead {...Astro.props}><slot /></StarlightHead>
+    <StarlightHead {...Astro.props}><slot /></StarlightHead>
 </VtbotStarlight>
 <LoadingIndicator />
 <ProgressBar />
 
-<!-- <style is:global>
-    html.loading {
+<style is:global lang="scss">
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        img {
+            transition: all 0.2s;
+            border-radius: 100%;
+            margin-left: 0.25rem;
+            width: 1.6rem;
+            display: inline-block !important;
+            transform: translateY(0rem);
+        }
+    }
+
+    html[data-theme="dark"] {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            img {
+                filter: invert(1);
+            }
+        }
+    }
+    /* html.loading {
         cursor: pointer;
         user-select: none;
     }
     html.loading * {
         pointer-events: none;
-    }
-</style> -->
+    } */
+</style>
