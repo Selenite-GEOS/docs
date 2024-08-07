@@ -16,8 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Disable jekyll
-        run: mkdir dist && touch dist/.nojekyll
       - name: Install, build, and upload your site
         uses: withastro/action@v2
 
