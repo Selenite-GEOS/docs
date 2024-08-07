@@ -2,10 +2,14 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import { loadEnv } from 'vite';
 
-const { SITE_URL = 'http://localhost:4444' } = loadEnv(process.env.NODE_ENV, process.cwd(), "");
+const { SITE_URL = 'http://localhost:4444', SITE_BASE = '' } = loadEnv(process.env.NODE_ENV, process.cwd(), "");
+console.log('SITE_URL', SITE_URL);
+console.log('SITE_BASE', SITE_BASE);
 // https://astro.build/config
 export default defineConfig({
 	site: SITE_URL,
+	base: SITE_BASE,
+	trailingSlash: 'always',
 	// prefetch: true,
 	integrations: [
 		starlight({
