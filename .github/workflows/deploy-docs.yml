@@ -8,6 +8,9 @@ on:
   release:
     types: [created]
 
+env:
+  SITE_URL: https://shaitanlyss.github.io/selenite-docs/
+
 jobs:
   build:
     runs-on: ubuntu-latest
