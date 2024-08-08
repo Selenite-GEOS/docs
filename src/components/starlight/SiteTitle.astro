@@ -1,38 +1,27 @@
 ---
-import { logos } from "virtual:starlight/user-images";
-import config from "virtual:starlight/user-config";
 import type { Props } from "@astrojs/starlight/props";
+import LogoBlack from "@assets/selenite-logo-black.svg";
+import LogoWhite from "@assets/selenite-logo-white.svg";
 
-const { siteTitle, siteTitleHref } = Astro.props;
+const { siteTitleHref } = Astro.props;
 ---
 
 <div class="sl-flex site-title">
   <a href={import.meta.env.SIMPLIFIED_URL}>
     {
-      config.logo && logos.dark && (
+      (
         <>
           <img
-            class:list={{ "light:sl-hidden": !("src" in config.logo) }}
-            alt={config.logo.alt}
-            src={logos.dark.src}
-            width={logos.dark.width}
-            height={logos.dark.height}
+            class="light:sl-hidden"
+            alt="Selenite Logo"
+            src={LogoWhite.src}
           />
-          {/* Show light alternate if a user configure both light and dark logos. */}
-          {!("src" in config.logo) && (
-            <img
-              class="dark:sl-hidden"
-              alt={config.logo.alt}
-              src={logos.light?.src}
-              width={logos.light?.width}
-              height={logos.light?.height}
-            />
-          )}
+          <img class="dark:sl-hidden" alt="Selenite Logo" src={LogoBlack.src} />
         </>
       )
     }
   </a>
-  <a href={siteTitleHref}> Docs </a>
+  <a href={siteTitleHref}> <span>Docs</span> </a>
   <!-- <a href={import.meta.env.ADVANCED_URL}>Advanced</a> -->
 </div>
 
@@ -40,16 +29,27 @@ const { siteTitle, siteTitleHref } = Astro.props;
   .site-title {
     align-items: center;
     gap: var(--sl-nav-gap);
+    overflow: visible;
+
     a {
       font-size: var(--sl-text-h4);
       font-weight: 600;
       color: var(--sl-color-text-accent);
       text-decoration: none;
       white-space: nowrap;
+      transition: all 0.2s ease;
+
+      &:hover:has(span) {
+        transform: translateY(-1px);
+      }
+      &:hover:has(img) {
+        filter: light-dark(invert(0.3), brightness(0.8));
+      }
     }
   }
+
   img {
-    height: calc(var(--sl-nav-height) - 2 * var(--sl-nav-pad-y));
+    height: calc(var(--sl-nav-height) - 3 * var(--sl-nav-pad-y));
     width: auto;
     max-width: 100%;
     object-fit: contain;
