@@ -2,13 +2,13 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import { loadEnv } from 'vite';
 
-const { SITE_ORIGIN, BASE_PATH = "/" } = loadEnv(process.env.NODE_ENV, process.cwd(), "");
+const { SITE_ORIGIN, BASE_PATH = "/", SIMPLIFIED_URL } = loadEnv(process.env.NODE_ENV, process.cwd(), "");
 if (SITE_ORIGIN)
 console.log('SITE_ORIGIN', SITE_ORIGIN);
 else
 console.warn('SITE_ORIGIN is not specified. A sitemap will not be generated.');
 console.log('BASE_PATH', BASE_PATH);
-
+console.log('SIMPLIFIED_URL', SIMPLIFIED_URL);
 const dev = import.meta.env.MODE === 'development';
 // https://astro.build/config
 export default defineConfig({
@@ -16,7 +16,7 @@ export default defineConfig({
 	base: BASE_PATH,
 	integrations: [
 		starlight({
-			title: 'Docs',
+			title: 'Selenite Docs',
 			logo: {
 				light: '@assets/selenite-logo-black.svg',
 				dark: '@assets/selenite-logo-white.svg',
@@ -76,6 +76,7 @@ export default defineConfig({
 			},
 			components: {
 				Head: "./src/components/starlight/Head.astro",
+				SiteTitle: "./src/components/starlight/SiteTitle.astro",
 			}
 		}),
 	],

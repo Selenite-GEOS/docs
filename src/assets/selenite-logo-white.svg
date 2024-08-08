@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="88.487976"
-   height="25.039999"
-   viewBox="0 0 88.487976 25.039999"
+   width="53.092785"
+   height="15.024"
+   viewBox="0 0 53.092785 15.024"
    version="1.1"
    id="svg1"
    xmlns="http://www.w3.org/2000/svg"
@@ -13,16 +13,16 @@
      id="defs1" />
   <g
      id="layer1"
-     transform="translate(-124.11316,-74.419712)">
+     transform="translate(-123.94036,-83.283712)">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;font-size:24px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
        x="123.68116"
        y="96.579712"
        id="text1"><tspan
          id="tspan1"
          x="123.68116"
          y="96.579712"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Island Moments';-inkscape-font-specification:'Island Moments';fill:#ffffff">Selenite</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:'Island Moments';-inkscape-font-specification:'Island Moments';fill:#ffffff">Selenite</tspan></text>
   </g>
 </svg>
