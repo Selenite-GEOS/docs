@@ -16,7 +16,8 @@ Commons contains the core classes and interfaces.
 #### Dependencies
 - [Commons](#commons)
 ### Backend [![repo](@assets/github.svg)](https://github.com/Selenite-GEOS/backend)
-### Simplified Interface [![repo](@assets/github.svg)]()
+MacroBlocs management.
+### Simplified Interface [![repo](@assets/github.svg)](https://github.com/Selenite-GEOS/simplified-interface)
 #### Dependencies
 - [Commons](#commons)
 - [Graph Editor](#graph-editor)

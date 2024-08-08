@@ -9,8 +9,8 @@ on:
     types: [created]
 
 env:
-  SITE_ORIGIN: https://selenite-geos.github.io
-  BASE_PATH: '/docs'
+  SITE_ORIGIN: https://${{github.repository_owner}}.github.io
+  BASE_PATH: '/${{ github.event.repository.name }}'
 
 jobs:
   build:

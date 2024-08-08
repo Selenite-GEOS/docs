@@ -9,15 +9,21 @@ else
 console.warn('SITE_ORIGIN is not specified. A sitemap will not be generated.');
 console.log('BASE_PATH', BASE_PATH);
 
-
+const dev = import.meta.env.MODE === 'development';
 // https://astro.build/config
 export default defineConfig({
 	site: SITE_ORIGIN,
 	base: BASE_PATH,
-	trailingSlash: 'never',
 	integrations: [
 		starlight({
-			title: 'Selenite Docs',
+			title: 'Docs',
+			logo: {
+				light: '@assets/selenite-logo-black.svg',
+				dark: '@assets/selenite-logo-white.svg',
+			},
+			editLink: true ? {
+				baseUrl: 'https://github.com/Selenite-GEOS/docs/edit/main/',
+			} : undefined,
 			// social: {
 			// 	github: 'https://github.com/withastro/starlight',
 			// },
@@ -80,6 +86,5 @@ export default defineConfig({
 	},
 	server: {
 		port: 4444,
-		host: true
 	}
 });
