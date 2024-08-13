@@ -51,3 +51,4 @@ Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro 
 
 ## TODO
 - Improve lightning css configuration
+- Investigate if Logo blinking can be rectified with svg or placeholder
