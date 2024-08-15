@@ -24,33 +24,6 @@ export default defineConfig({
 		// 	< link rel = "preconnect" href = "https://fonts.googleapis.com" >
 		// <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		// 	<link href="https://fonts.googleapis.com/css2?family=Island+Moments&display=swap" rel="stylesheet">
-			head: [
-
-				{
-					tag: 'link',
-					attrs: {
-						rel: 'preconnect',
-						href: 'https://fonts.googleapis.com',
-					},
-				},
-				{
-					tag: 'link',
-					attrs: {
-						rel: 'preconnect',
-						href: 'https://fonts.gstatic.com',
-						crossorigin: true,
-					},
-				},
-				{
-					tag: 'link',
-					attrs: {
-						href: 'https://fonts.googleapis.com/css2?family=Island+Moments&display=swap',
-						rel: 'preload',
-						as: 'style',
-					},
-				},
-				
-			],
 			editLink: true ? {
 				baseUrl: 'https://github.com/Selenite-GEOS/docs/edit/main/',
 			} : undefined,
