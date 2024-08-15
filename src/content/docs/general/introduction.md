@@ -5,19 +5,19 @@ sidebar:
     order: 0
 ---
 
-Welcome to Selenite! Selenite is an initiative to provide geoscientists around the world with a powerful graphical interface for using GEOS, a massively parallelized multiphysic simulation framework.
+**Welcome to _Selenite_!** _Selenite_ is an initiative to provide geoscientists around the world with a powerful graphical interface for using _GEOS_, a massively parallelized multiphysics simulation framework.
 
 ## Two interfaces
-Selenite consists of two interfaces, Selenite Simple and Selenite Advanced.
+_Selenite_ consists of two interfaces, _Selenite_ and _Selenite Advanced_.
 
 ### Selenite
-Selenite (or Selenite Simple) aims to be a simplified interface which aims to make using GEOS as simple as picking a few components and changing a few parameters.
+_Selenite_ (or _Selenite Simple_) aims to be a simplified interface which aims to make using _GEOS_ as simple as picking a few components and changing a few parameters.
 
 ### Selenite Advanced
-On the other hand, Selenite Advanced aims to provide users with a powerful and limitless way to create GEOS input files using visual programming. 
+On the other hand, _Selenite Advanced_ aims to provide users with a powerful and limitless way to create GEOS input files using visual programming. 
 
 ### Data sharing
-The two interfaces are connected and can share configuration blocks (macro blocks). For instance, if in Selenite Simple you end up missing a feature, all you have to do is to use Selenite Advanced to create a macro block that will then be available in the simplified interface.
+The two interfaces are connected and can share configuration blocks (macro blocks). For instance, if in _Selenite Simple_ you end up missing a feature, all you have to do is to use _Selenite Advanced_ to create a macro block that will then be available in the simplified interface.
 
 ## Further reading
 - [Selenite Simple](https://selenite-geos.github.io/docs/simplified-interface/introduction/)
