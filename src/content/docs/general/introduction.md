@@ -20,6 +20,6 @@ On the other hand, _Selenite Advanced_ aims to provide users with a powerful and
 The two interfaces are connected and can share configuration blocks (macro blocks). For instance, if in _Selenite Simple_ you end up missing a feature, all you have to do is to use _Selenite Advanced_ to create a macro block that will then be available in the simplified interface.
 
 ## Further reading
-- [Selenite Simple](https://selenite-geos.github.io/docs/simplified-interface/introduction/)
-- [Selenite Advanced](https://selenite-geos.github.io/docs/advanced-interface/introduction/)
-- [Developper introduction](https://selenite-geos.github.io/docs/developper/introduction/)
+- Read the introduction of [Selenite Simple](https://selenite-geos.github.io/docs/simplified-interface/introduction/)
+- Read the introduction [Selenite Advanced](https://selenite-geos.github.io/docs/advanced-interface/introduction/)
+- For developpers, see the [Developper introduction](https://selenite-geos.github.io/docs/developper/introduction/)
