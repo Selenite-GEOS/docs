@@ -9,7 +9,7 @@ Selenite features a code editor akin to VScode and dedicated to writing GEOS XML
 
 It provides you with a smart auto complete, as well as a smart hover which contains descriptions and links to relevant parts of GEOS Docs.
 
-Selenite also includes an integration between this code editor and the graoh editor, which you can read more about in the next section. (TODO: Add link)
+Selenite also includes an integration between this code editor and the graph editor, which you can read more about in the next section. (TODO: Add link)
 
 ## Commands
 Several commands are available. Commands are actions that you can trigger either with a button, a context menu or a keyboard shortcut. Note that some commands may become unavailable based on the context (example: (Live Preview)[TODO]).
