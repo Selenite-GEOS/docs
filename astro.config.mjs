@@ -4,9 +4,9 @@ import { loadEnv } from 'vite';
 
 const { SITE_ORIGIN, BASE_PATH = "/", SIMPLIFIED_URL } = loadEnv(process.env.NODE_ENV, process.cwd(), "");
 if (SITE_ORIGIN)
-console.log('SITE_ORIGIN', SITE_ORIGIN);
+	console.log('SITE_ORIGIN', SITE_ORIGIN);
 else
-console.warn('SITE_ORIGIN is not specified. A sitemap will not be generated.');
+	console.warn('SITE_ORIGIN is not specified. A sitemap will not be generated.');
 console.log('BASE_PATH', BASE_PATH);
 console.log('SIMPLIFIED_URL', SIMPLIFIED_URL);
 const dev = import.meta.env.MODE === 'development';
@@ -21,6 +21,36 @@ export default defineConfig({
 				light: '@assets/selenite-logo-black.svg',
 				dark: '@assets/selenite-logo-white.svg',
 			},
+		// 	< link rel = "preconnect" href = "https://fonts.googleapis.com" >
+		// <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		// 	<link href="https://fonts.googleapis.com/css2?family=Island+Moments&display=swap" rel="stylesheet">
+			head: [
+
+				{
+					tag: 'link',
+					attrs: {
+						rel: 'preconnect',
+						href: 'https://fonts.googleapis.com',
+					},
+				},
+				{
+					tag: 'link',
+					attrs: {
+						rel: 'preconnect',
+						href: 'https://fonts.gstatic.com',
+						crossorigin: true,
+					},
+				},
+				{
+					tag: 'link',
+					attrs: {
+						href: 'https://fonts.googleapis.com/css2?family=Island+Moments&display=swap',
+						rel: 'preload',
+						as: 'style',
+					},
+				},
+				
+			],
 			editLink: true ? {
 				baseUrl: 'https://github.com/Selenite-GEOS/docs/edit/main/',
 			} : undefined,
