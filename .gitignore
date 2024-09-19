@@ -5,6 +5,7 @@ dist/
 
 tmp/
 src/content/docs/api/
+src/content/docs/developper/api/
 
 # dependencies
 node_modules/
