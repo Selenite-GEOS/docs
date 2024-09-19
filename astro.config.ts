@@ -1,9 +1,8 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
-import { loadEnv, type Plugin } from "vite";
-import starlightTypeDoc, {
+import { loadEnv } from "vite";
+import {
   createStarlightTypeDocPlugin,
-  typeDocSidebarGroup,
   type StarlightTypeDocOptions,
 } from "starlight-typedoc";
 import {} from 'typedoc'
@@ -14,7 +13,7 @@ const {
   SITE_ORIGIN,
   BASE_PATH = "/",
   SIMPLIFIED_URL,
-} = loadEnv(process.env.NODE_ENV, process.cwd(), "");
+} = loadEnv(process.env.NODE_ENV ?? 'development', process.cwd(), "");
 if (SITE_ORIGIN) console.log("SITE_ORIGIN", SITE_ORIGIN);
 else
   console.warn(
@@ -22,14 +21,7 @@ else
   );
 console.log("BASE_PATH", BASE_PATH);
 console.log("SIMPLIFIED_URL", SIMPLIFIED_URL);
-const dev = import.meta.env.MODE === "development";
-
-const [testStarlightTypeDoc, testTypeDocSidebarGroup] =
-  createStarlightTypeDocPlugin();
-const [commonsStarlightTypeDoc, commonsTypeDocSidebarGroup] =
-  createStarlightTypeDocPlugin();
-const [graphEditorStarlightTypeDoc, graphEditorTypeDocSidebarGroup] =
-  createStarlightTypeDocPlugin();
+// const dev = import.meta.env.MODE === "development";
 
 function getRepo({ repoUrl, output }: { repoUrl: string; output: string }) {
 const dir = `tmp/${output}`;

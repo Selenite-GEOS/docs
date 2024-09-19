@@ -24,6 +24,7 @@
     "typescript": "^5.5.4"
   },
   "devDependencies": {
+    "@types/node": "^22.5.5",
     "astro-vtbot": "^1.8.3",
     "vite": "^5.3.5"
   }
