@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/check": "0.9.3",
     "@astrojs/starlight": "0.27",
+    "@astrojs/svelte": "^5.7.1",
     "astro": "4.15.8",
     "lightningcss": "^1.26.0",
     "sharp": "^0.32.5",
